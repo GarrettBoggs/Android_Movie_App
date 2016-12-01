@@ -6,6 +6,6 @@ package com.epicodus.movieapp;
 public class Constants {
 
     public static final String MOVIE_KEY = BuildConfig.MOVIE_KEY;
-    public static final String MOVIE_BASE_URL = "https://api.themoviedb.org/3/search/movie?api_key= " + MOVIE_KEY + "&language=en-US&query=Hot%20Rod&page=1&include_adult=false&primary_release_year=2008";
-    public static final String MOVIE_TITLE_QUERY = "title";
+    public static final String MOVIE_BASE_URL = "https://api.themoviedb.org/3/search/movie?";
+    public static final String MOVIE_TITLE_QUERY = "query";
 }

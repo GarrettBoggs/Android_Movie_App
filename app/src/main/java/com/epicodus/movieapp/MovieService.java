@@ -18,6 +18,7 @@ public class MovieService {
 
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.MOVIE_BASE_URL).newBuilder();
         urlBuilder.addQueryParameter(Constants.MOVIE_TITLE_QUERY, title);
+        urlBuilder.addQueryParameter("api_key" , Constants.MOVIE_KEY);
         String url = urlBuilder.build().toString();
 
         Request request = new Request.Builder()
