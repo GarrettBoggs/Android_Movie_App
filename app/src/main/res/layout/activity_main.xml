@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Search Movie Titles"
         android:id="@+id/movieTitleSearchButton"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/movieTitleEditText"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -38,4 +38,33 @@
         android:layout_alignEnd="@+id/movieTitleTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter an Actor/Actress"
+        android:textAlignment="center"
+        android:id="@+id/textView"
+        android:layout_below="@+id/movieTitleSearchButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/actorEditText"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for Actor/Actress"
+        android:id="@+id/actorSearchButton"
+        android:layout_below="@+id/actorEditText"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
