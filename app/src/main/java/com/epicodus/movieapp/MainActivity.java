@@ -1,6 +1,7 @@
 package com.epicodus.movieapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.movieTitleSearchButton) Button mMovieTitleSearchButton;
     @Bind(R.id.actorEditText) EditText mActorEditText;
     @Bind(R.id.actorSearchButton) Button mActorSearchButton;
+    @Bind(R.id.phoneButton) Button mPhoneButton;
+    @Bind(R.id.phoneEditText) EditText mPhoneEditText;
 
 
     @Override
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mMovieTitleSearchButton.setOnClickListener(this);
         mActorSearchButton.setOnClickListener(this);
+        mPhoneButton.setOnClickListener(this);
 
     }
 
@@ -44,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, ActorActivity.class);
             intent.putExtra("actor", actor);
             startActivity(intent);
+        }
+
+        if(v == mPhoneButton) {
+            Intent phoneIntent = new Intent(Intent.ACTION_DIAL,
+                    Uri.parse("tel:" + mPhoneEditText.getText().toString()));
+            startActivity(phoneIntent);
         }
     }
 }
